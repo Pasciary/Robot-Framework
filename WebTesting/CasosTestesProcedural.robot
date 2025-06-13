@@ -12,10 +12,10 @@ Caso de Teste 01 - Acesso ao menu "Mais Vendidos"
     ...              E com isso validando as informações presentes.
     [Tags]    menus
     Acessar a home page do site Amazon.com.br
-#     Entrar no menu Mais Vendidos
-#     Verificar se o titulo da pagina fica "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
-#     Verificar se aparece a frase "Mais vendidos"
-#     Verificar se aparece a categoria "Apps e Jogos"
+    Entrar no menu Mais Vendidos
+    Verificar se aparece a frase "Mais vendidos"
+    Verificar se o titulo da pagina fica "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
+    Verificar se aparece a categoria "Apps e Jogos"
 
 # Caso de Teste 02 -- Pesquisa de Produtos
 #     [Documentation]  Esse teste verifica se existe um produto
