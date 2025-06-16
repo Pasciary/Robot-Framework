@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Essa switch testa o site da Amazon.com.busca_produtos
-Resource         amazon_resources.robot
+Resource         resources/amazon_resources.robot
 Test Setup       Abrir o navegador
 Test Teardown    Run Keywords    
 ...    Capture Page Screenshot    AND    
