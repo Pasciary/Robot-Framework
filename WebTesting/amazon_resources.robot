@@ -55,3 +55,18 @@ Verificar o resultado da pesquisa, listando "${Prod}" na pesquisa
     Element Should Be Visible    locator=//span[normalize-space()='${Prod}']
 
 
+
+# Gherkin Steps
+Given que estou na home page da amazon.com.br
+    Acessar a home page do site Amazon.com.br
+
+When entrar no menu Mais Vendidos
+    Entrar no menu Mais Vendidos
+    Verificar se aparece a frase "Mais vendidos"
+    Verificar se o titulo da pagina fica "Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon"
+
+Then deve aparecer a opção de "Apps e Jogos"
+    Verificar se aparece a categoria "Apps e Jogos"
+
+Then clicar na categoria "Apps e Jogos"
+    Clicar na categoria "Apps e Jogos"
