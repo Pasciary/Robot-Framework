@@ -2,8 +2,15 @@
 Documentation   Exemplo de escopo de variáveis: GLOBAIS, SUITE, TESTE (test case) e LOCAL (keyword)
 Library         String
 
-*** Variable ***
+*** Variable *** 
+# Instancia variaveis globais na suite.
+
 ${GLOBAL_INSTANCIADA}     Minha variável GLOBAL_INSTANCIADA foi instanciada para a suíte
+
+
+# Toda variavel que o seu escopo é para Suite vai ser executado só nessa Suite
+# Caso seja no Teste, ele vai ser só para o teste em questão, não sendo visivel para os outros testes
+# Variavel só para Keyword vai ser visivel só para keyword.
 
 *** Test Cases ***
 Caso de teste de exemplo 01
@@ -20,15 +27,20 @@ Caso de teste de exemplo 03
 *** Keywords ***
 Uma keyword qualquer 01
     ${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO}     Generate Random String
-    #A variável "global" pode ser utilizada em todas as suítes em execução
+    # Criação de uma variavel que possui uma keyword de retorno, essa generate retorna uma string aleatoria
+
     Set Global Variable    ${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO}
-    #A variável "suite" pode ser utilizada somente nos testes da suíte em execução
-    Set Suite Variable     ${SUITE_CRIADA_EM_TEMPO_EXECUCAO}    Variável da suíte
-    #A variável "test" pode ser utilizada somente nas todas as keywords do teste em execução
+    # Essa variavel vai ser criada para todos os testes globalmente, apartir de sua execução.
+
+        Set Suite Variable     ${SUITE_CRIADA_EM_TEMPO_EXECUCAO}    Variável da suíte
+    # Esta variavel só vai ser utilizada nesse suite em questão depois de criada.
+
     Set Test Variable      ${TESTE_01}   Variável do teste 01
     Log         ${TESTE_01}
-    #A variável "local" pode ser utilizada somente na keyword em execução
+    #A variável "local" pode ser utilizada somente na keyword em execução, como esta no test1 vai aparecer apenas para ele
+
     ${LOCAL}    Set Variable    Variável local da keyword 01
+    # Essa forma de chamar uma variavel serve apenas da mesma forma que a set test, porém é realizada de forma diferente.
     Log   ${LOCAL}
 
 Uma keyword qualquer 02

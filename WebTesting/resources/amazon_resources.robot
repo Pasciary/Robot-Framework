@@ -56,7 +56,7 @@ Verificar o resultado da pesquisa, listando "${Prod}" na pesquisa
 
 
 
-# Gherkin Steps
+########## Gherkin Steps ##########
 Given que estou na home page da amazon.com.br
     Acessar a home page do site Amazon.com.br
 
